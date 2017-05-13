@@ -27,6 +27,18 @@ app.config(function($routeProvider) {
 
 app.controller('icredCtrl', ['$scope','$location',function($scope, $location){
 	
+  $scope.tabs = [{name:'Home', url:'#/'},
+                 {name:'Home Loan', url:'#tab1'},
+                 {name:'Personal Loan', url:'#tab2'}]
+  
+  
+  
+  
+  
+  
+  
+  
+  
 	$scope.$on('$locationChangeSuccess', function(){
 		var path = $location.path();
     if(path && path.includes('tab1')) $scope.selection = 'tab1';
