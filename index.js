@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("icred", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -25,7 +25,7 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('myAppCtrl', ['$scope','$routeParams','$location','$rootScope',function($scope, $routeParams, $location, $rootScope){
+app.controller('icredCtrl', ['$scope','$routeParams','$location','$rootScope',function($scope, $routeParams, $location, $rootScope){
 	
 	$rootScope.$on('$locationChangeSuccess', function(){
 		var path = $location.path();
