@@ -27,15 +27,11 @@ app.config(function($routeProvider) {
 
 app.controller('myAppCtrl', ['$scope','$routeParams','$location','$rootScope',function($scope, $routeParams, $location, $rootScope){
 	
-
-	
 	$rootScope.$on('$locationChangeSuccess', function(){
 		var path = $location.path();
-    
     if(path && path.includes('tab1')) $scope.selection = 'tab1';
     else if(path && path.includes('tab2')) $scope.selection = 'tab2';
     else $scope.selection = 'default';
-
 	});
 	
 }]);
