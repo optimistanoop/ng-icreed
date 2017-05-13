@@ -25,9 +25,9 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('icredCtrl', ['$scope','$routeParams','$location','$rootScope',function($scope, $routeParams, $location, $rootScope){
+app.controller('icredCtrl', ['$scope','$location',function($scope, $location){
 	
-	$rootScope.$on('$locationChangeSuccess', function(){
+	$scope.$on('$locationChangeSuccess', function(){
 		var path = $location.path();
     if(path && path.includes('tab1')) $scope.selection = 'tab1';
     else if(path && path.includes('tab2')) $scope.selection = 'tab2';
